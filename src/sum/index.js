@@ -10,6 +10,11 @@
 * sum(-1, 13); // 12
 */
 const sum = (a, b) => {
+  if (isFinite(a) && isFinite(b))
+    return a+b;
+  else
+    throw new Error();
+
   /* your logic here...*/
 };
 

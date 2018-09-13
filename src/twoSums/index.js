@@ -9,7 +9,24 @@
  * twoSums([5, 9, 3], 12); // [9, 3]
  */
 const twoSums = (arr, base) => {
-  /* your logic here...*/
-};
+
+  let map = [];
+  let indexnum = [];
+
+  for (let x = 0; x < arr.length; x++) {
+    if (map[arr[x]] != null) {
+      let index = map[arr[x]];
+      indexnum[0] = index + 1;
+      indexnum[1] = x + 1;
+      break;
+    }
+    else {
+      map[base - arr[x]] = x;
+    }
+  }
+  return indexnum;
+}
+}
+
 
 export default twoSums;

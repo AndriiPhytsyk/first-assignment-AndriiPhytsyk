@@ -7,6 +7,15 @@
  */
 const getFlags = arr => {
   /* your logic here...*/
+  let arr2 = [];
+  arr.forEach(a => {
+    a.flags.forEach(number => {
+      arr2.push(number);
+    })
+  });
+
+  return arr2;
+
 };
 
 export default getFlags;

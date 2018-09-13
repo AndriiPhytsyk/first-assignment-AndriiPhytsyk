@@ -7,6 +7,13 @@
 * max([-1, 0]);   // 0
 */
 const max = arr => {
+  let max = Number.MIN_SAFE_INTEGER;
+
+  arr.forEach(number => {
+    if(number > max) max = number;
+  });
+
+  return max;
   /* your logic here...*/
 };
 
